@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Dev Notes</title>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<!--connect to modernizer to check to see if the user's browser can't support some of our script... looks like if not, modernizr might also have classes to add the functionality to the elements with HTML5 features the browser doesn't support-->
+<script type="text/javascript" src="modernizr-latest.js"></script>
+<!--connect to jquery-->
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<!--This tells the page not to fire off any scripts until the entire DOM has loaded. The "ready" event fires off when the dom is done loading-->
+<script type="text/javascript">
+$(document).ready( function(){
+    //alert("hello universe"); **this just tests to make sure jqurey is working**
+    
+    if(!Modernizr.input.autofocus)
+    {
+        $("input[autofocus]").focus();//helps older browsers with the autofocus    
+    }
+    
+});    
+</script>    
+</head> 
+<body class="page" id="top"> 
+	<header>
+	<h1>HTML 5 Forms</h1> 
+	</header>
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+            <li><a href="quickcard.html">Quick Card</a></li>
+            <li><a href="forms.html">Forms</a></li>
+		</ul>
+		<h2>main navigation</h2> 
+	</nav>
+
+	<div id="primaryContent">
+		<article>	
+			<h2>setting up html5 forms</h2>
+			
+            <h4>autofocus</h4>
+                <form method="get" action="#">
+                    <p><label for="text1">Field 1: </label><input name="Text1" type="text" autofocus /> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form>
+
+            <h4>autoComplete</h4>
+                <form method="get" action="#">
+                    <!--the autocomplete appears to be on by default for the browser I was testing, but explicit off worked for ssn-->
+                    <p><label for="text3">Social Security Number: </label><input name="Text3" type="text" autocomplete="off"/> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form>
+            
+            <h4>placeholder</h4>
+                <form method="get" action="#">
+                    <p><label for="text3">Your text: </label><input name="Text3" type="text" placeholder="your text here"/> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form>
+            
+            <h4>pattern</h4>
+                <form method="get" action="#">
+                    <p><label for="text2">Zip: </label><input name="Text2" type="text" placeholder="90201" pattern="^[0-9]{5}$"/> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form>
+                        
+            <h4>required</h4>
+                <form method="get" action="#">
+                    <p><label for="text2">Required name: </label><input name="Text2" type="text" required/> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form>
+                
+            <h4>search - doesn't work for real yet in early 2015</h4>
+                <form method="get" action="#">
+                    <p><label for="text2">Search: </label><input name="Text2" type="search" search/> </p>
+                    <input type="submit" value="Hit Me!" />   
+                </form>
+                
+            <h4>email</h4> 
+                <form method="get" action="#">
+                    <p><label for="text2">Email: </label><input name="Text2" type="email" search/> </p>
+                    <input type="submit" value="Hit Me!" />  
+                </form>                
+                
+            <h4>url</h4> 
+                <form method="get" action="#">
+                    <p><label for="text2">url: </label><input name="Text2" type="url" search/> </p>
+                    <input type="submit" value="Hit Me!" />   
+                </form>
+            
+            <h4>phone -- this one didn't work in the class... he said we'd come back to it</h4> 
+                <form method="get" action="#">
+                    <p><label for="text2">phone: </label><input name="Text2" type="" /> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form> 
+            
+            <h4>numbers - gives you spinner</h4> 
+                <form method="get" action="#">
+                    <p><label for="text2">number: </label><input name="Text2" type="number" value="5" /> </p>
+                    <p><label for="text2">Month: </label><input name="Text2" type="number" value="1" min="1" max="12"/> </p>
+                    <p><label for="text2">Step: </label><input name="Text2" type="number" value="5" step="5"/> </p>
+                    <p><label for="text2">Float: </label><input name="Text2" type="number" value="0.1" min="0.1" max="2.0" step="0.1"/> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form> 
+            
+            <h4>Time - the spinners showed up in Chrome but not in Firefox</h4> 
+                <form method="get" action="#">
+                    <p><label for="text2">Time: </label><input name="Text2" type="time" value="01:30" step="3600" /> </p>
+                    <p><label for="text2">Date:</label><input name="Text2" type="date" value="2014-01-12" /> </p> <!--never got this one working-->
+                    <p><label for="text2">Datetime:</label><input name="Text2" type="datetime" value="2015-01-12T01:30" /> </p>
+                    <p><label for="text2">Datetime Local:</label><input name="Text2" type="datetime-local" value="2014-01-12T06:50:00Z" /> </p>                               <p><label for="text2">Week:</label><input name="Text2" type="week" value="2016-W07" /> </p>
+                    <p><label for="text2">Month:</label><input name="Text2" type="month" value="2017-12" /> </p>      
+                    <p><label for="text2">Month (min-max):</label><input name="Text2" type="month" value="2017-12" min="2017-01" max="2017-12"/> </p>
+                    <input type="submit" value="Hit Me!" />
+                </form> 
+            
+    		</article>
+
+
+	</div> <!-- closing primaryContent   -->
+	
+
+</body>
+</html>

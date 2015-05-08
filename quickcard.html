@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Dev Notes</title>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<!--connect to modernizer to check to see if the user's browser can't support some of our script... looks like if not, modernizr might also have classes to add the functionality to the elements with HTML5 features the browser doesn't support-->
+<script type="text/javascript" src="modernizr-latest.js"></script>
+<!--connect to jquery-->
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<!--This tells the page not to fire off any scripts until the entire DOM has loaded. The "ready" event fires off when the dom is done loading-->
+
+    
+</head> 
+<body class="page" id="top"> 
+	<header>
+	<h1>Web Quick Guide</h1> 
+	</header>
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+            <li><a href="quickcard.html">Quick Card</a></li>
+            <li><a href="forms.html">Forms</a></li>
+		</ul>
+		<h2>main navigation</h2> 
+	</nav>
+
+	<div id="primaryContent">
+        <article>	
+            <h1>Web Quick Guide</h1>
+            <p>This is good stuff I can refer back to.</p>
+            <h2>Git</h2>
+            <h3>Make a new repo</h3>
+                <ol>
+                    <li>Open GitBash</li>
+                    <li>Navigate to the directory you want as a local repo</li>
+                    <li>Type: <span class="code">git init</span></li>
+                    <li>Type this to make sure there has been a change (you should see red text): <span class="code">git status</span></li>
+                    <li>Type: <span class="code">git add .</span></li>
+                    <li>Type: <span class="code">git commit -m "Initialize repo”</span></li>
+                    <li>Go to GitHub</li>
+                    <li>Make a new repo there with the exact same name as your local directory.</li>
+                    <li>Copy the URL for the repo:
+                    <p><img src="images/GitHubURL.png"/></p></li>
+                    <li>Go back to GitBash and type: <span class="code">git remote add origin url</span></li>
+                    <li>Type: <span class="code">git push origin master</span></li>
+                    <li>Enter your GitHub creds.</li>
+                    <li>To back to GitHub and refresh the page to make sure all your files are in the repo.</li>
+                    <li>To make a gh-pages live site:
+                        <li>In gitbash, in your master, type: <span class="code">git checkout -b gh-pages</span></li>
+                        <li>Type: <span class="code">git push origin gh-pages</span></li>
+                        <li>Enter your GitHub creds.</li>
+                        <li>Go to GitHub to make sure the gh-pages is there and complete.</li>
+                    </li>
+
+                </ol>
+            <h3>Update a repo</h3>
+        <p>After you make changes on your local files you need to push them to GitHub</p>
+                <ol>
+                    <li>Open GitBash</li>
+                    <li>Navigate to your local directory</li>
+                    <li>Type this to make sure there has been a change (you should see red text): <span class="code">git status</span></li>
+                    <li>Type: <span class="code">git add .</span></li>
+                    <li>Type: <span class="code">git commit -m "Initialize repo”</span></li>
+                    <li>Go to GitHub</li>
+                    <li>Type: <span class="code">git push origin master</span></li>
+                    <li>Enter your GitHub creds.</li>
+                    <li>To back to GitHub and refresh the page to make sure your changes made it to the repo.</li>
+                </ol>
+           
+        </article>
+		
+	</div> <!-- closing primaryContent   -->
+	
+	<footer>
+		<p>
+		&copy; Copyright  by jason zeringue
+		</p>
+	</footer>
+</body>
+</html>
