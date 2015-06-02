@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Dev Notes</title>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+
+</head> 
+<body class="page" id="top"> 
+	<header>
+        <h1>Javascript</h1>
+	</header>
+    
+	<nav id="navigation" role="navigation">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+            <li><a href="git.html">GIT</a></li>
+            <li><a href="forms.html">Forms</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="javascript.html">Javascript</a></li>
+		</ul>
+	</nav>
+
+	<div id="primaryContent">
+		<article>	
+			<p>Here's stuff I found in my class notes from the Javascript class with Jason.</p>	
+            <h3>Using document.getElementById() and .innerHTML</h3>
+            <p>You use the document.getElementById to grab a specific element and do something with it. In the HTML you have an element that has an id like:</p>
+            <p><xmp><p id="replace">this is some text</p></xmp></p>
+            <p>NOTE: If you look at the source for the above paragraph, you'll see that I used an "xmp" tag to get the html elements to show up as litterals. But it placed the text way to the left... so I used the style for the p tag on the xmp tag and it worked.</p>
+            <p>In a javascript file (.js), you use that id to identify the object you're going to do something with.</p>
+            <h4>What the .js code looks like:</h4>
+            <span class=code><p>var myQuote = '"What is a Week End?"';</p>
+            <p>var myComment = "Who said this:";</p>
+            <p>var message = myComment + " " + myQuote;</p>
+            <p>var paragraphRef = document.getElementById("replace");</p>
+            <p>paragraphRef.innerHTML = message;</p></span>	
+            <h4>Here's the p called "replace"</h4>
+            <p>In the .html file it's just like the one above (says "this is some text"), but once rendered it gets it's text (innerhtml) from the test.js file:</p>
+            <p id="replace">this is some text</p>
+            <h3>Modernizer</h3>
+            <p>We learned about "Mondernizer". It's a JavaScript library that can tell if a client has all of the CSS3 and HTML5 features you're using. I *think* it let's you make if else statements for browsers that don't support the features you're using. We put the modernizer-latest.js file directly into the root folder for some reason and called it from the html file like this:</p>
+            <xmp><script type="text/javascript" src="javascript/test.js"></script></xmp>
+        </article>            
+	<footer>
+		<p>
+		Draft content
+		</p>
+	</footer>
+        <script type="text/javascript" src="javascript/test.js"></script>
+</body>
+</html>
+<!--                &quot;"&lt;<p id=&quot;"message&quot;"&gt;>mytext&lt;</p&gt;>&quot;"-->

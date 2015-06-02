@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html{
-	/*background: #A7C520 url( ../images/interfaceImages/body-background2.png) repeat-x 350px 0px*/;
+	background: #7F6B6B /*url( ../images/interfaceImages/body-background2.png) repeat-x 350px 0px*/;
 }
 body {
 	/*color:#331C12; ALMOST BLACK  
@@ -28,6 +28,7 @@ h3 { font-size: 1.3em; font-weight:normal; margin: -.4em 0em .2em 0em; padding:0
 h4 {padding:0 30px 0 30px; }
 p { margin: 0 0 .9em 0; padding:0 30px; line-height: 1.3em; clear:left; }
 .code {font-family: monospace;}
+span
 img {   border: 2px solid #7F472E; padding:0px; margin:5px;  }
 
 /* LINK STYLES SECTIONS FOR THE WEBSITE */
@@ -48,15 +49,15 @@ nav a:active  { color: #331C12;}   /* active links    */
 
 header {
 	height: 150px;
-	background: #85AB18 url(../images/interfaceImages/banner-background2.png);
+	background: #5D3A3A url(../images/interfaceImages/banner-background2.png);
 }
-header h1 {font-size:2.5em; font-weight:bolder; padding:30px 20px 20px 30px; width: 350px; color:#a7c520; }
+header h1 {font-size:2.5em; font-weight:bolder; padding:80px 20px 20px 30px; width: 450px; color: #FAAC58; }
 
 nav{
 	text-align:center;
 	margin-top: 0; 
 	margin-bottom: 15px;
-	background: #8AB8E6 /*#85AB18*/;
+	background: #C96F6F /*#85AB18*/;
 }
 nav ul{
 	width:auto;
@@ -88,7 +89,11 @@ aside{border: solid 1px; margin:30px; width:300px; float:right;}
 aside p {padding:0px 30px;}
 aside div p{padding:0;} 
 aside h3, aside img{padding:0px 10px 0px 30px; margin:0;}
-footer{	background-color:/*#A7C520*/#8AB8E6; color:#ffffff;  text-align:center; }
+footer{	background-color:/*#A7C520*/#C96F6F; color:#ffffff;  text-align:center; }
 form {margin: 10px 10px 30px 30px;;}
 button{ margin:5px 5px 5px 30px;}
+
+xmp{
+     margin: 0 0 .9em 0; padding:0 30px; line-height: 1.3em; clear:left; 
+}
 
